@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="工具," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -89,23 +89,28 @@
 
 
 
-<meta name="description" content="作为程序员来讲，最好的写作格式莫过于MarkDown（以下简称md）语法格式了，简洁明了，令人赏心悦目。处女座甚好……虽然我不是处女座，但是美观大方的东西谁不爱呢？    市面上辣么多md编辑器，  Why Typora?  在这里给大家推荐一个MacOS MarkDown编辑器——Typora。
-Typora最大的特点它在一个窗口中结合了语法高亮和实时预览。这样我们就可以在一个窗口中以Mark">
+<meta name="description" content="获取Git仓库
+有两种取得Git 项目仓库的方法。1.在现有的项目或者目录下导入所有的文件到Git中 2.从一个服务器克隆一个现有的Git仓库。
+1.在现有目录中初始化仓库
+1git init
+该命令创建了.git子目录，它紧紧包含初始化Git仓库中所有的必须文件，这些文件是Git仓库的骨干。如果你是在已经存在文件的文件夹中初始化Git仓库，我们应该开始跟踪这些文件并且提交。git add 命令来">
 <meta property="og:type" content="article">
-<meta property="og:title" content="究级MarkDown编辑软件">
-<meta property="og:url" content="ericode.pro/2016/06/25/究级MarkDown编辑软件/index.html">
+<meta property="og:title" content="《Git-Pro》Git初识">
+<meta property="og:url" content="ericode.pro/2016/09/25/《Git-Pro》Git初识/index.html">
 <meta property="og:site_name" content="Eric的博客">
-<meta property="og:description" content="作为程序员来讲，最好的写作格式莫过于MarkDown（以下简称md）语法格式了，简洁明了，令人赏心悦目。处女座甚好……虽然我不是处女座，但是美观大方的东西谁不爱呢？    市面上辣么多md编辑器，  Why Typora?  在这里给大家推荐一个MacOS MarkDown编辑器——Typora。
-Typora最大的特点它在一个窗口中结合了语法高亮和实时预览。这样我们就可以在一个窗口中以Mark">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/877666-cdcf5052d21851e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/877666-063f4b77ac52c3dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/877666-dcc191dddfa43848.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-25T11:53:03.000Z">
+<meta property="og:description" content="获取Git仓库
+有两种取得Git 项目仓库的方法。1.在现有的项目或者目录下导入所有的文件到Git中 2.从一个服务器克隆一个现有的Git仓库。
+1.在现有目录中初始化仓库
+1git init
+该命令创建了.git子目录，它紧紧包含初始化Git仓库中所有的必须文件，这些文件是Git仓库的骨干。如果你是在已经存在文件的文件夹中初始化Git仓库，我们应该开始跟踪这些文件并且提交。git add 命令来">
+<meta property="og:updated_time" content="2017-03-25T12:12:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="究级MarkDown编辑软件">
-<meta name="twitter:description" content="作为程序员来讲，最好的写作格式莫过于MarkDown（以下简称md）语法格式了，简洁明了，令人赏心悦目。处女座甚好……虽然我不是处女座，但是美观大方的东西谁不爱呢？    市面上辣么多md编辑器，  Why Typora?  在这里给大家推荐一个MacOS MarkDown编辑器——Typora。
-Typora最大的特点它在一个窗口中结合了语法高亮和实时预览。这样我们就可以在一个窗口中以Mark">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/877666-cdcf5052d21851e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="《Git-Pro》Git初识">
+<meta name="twitter:description" content="获取Git仓库
+有两种取得Git 项目仓库的方法。1.在现有的项目或者目录下导入所有的文件到Git中 2.从一个服务器克隆一个现有的Git仓库。
+1.在现有目录中初始化仓库
+1git init
+该命令创建了.git子目录，它紧紧包含初始化Git仓库中所有的必须文件，这些文件是Git仓库的骨干。如果你是在已经存在文件的文件夹中初始化Git仓库，我们应该开始跟踪这些文件并且提交。git add 命令来">
 
 
 
@@ -133,13 +138,13 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
 
 
 
-  <link rel="canonical" href="ericode.pro/2016/06/25/究级MarkDown编辑软件/"/>
+  <link rel="canonical" href="ericode.pro/2016/09/25/《Git-Pro》Git初识/"/>
 
 
 
 
 
-  <title> 究级MarkDown编辑软件 | Eric的博客 </title>
+  <title> 《Git-Pro》Git初识 | Eric的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +283,7 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ericode.pro/2016/06/25/究级MarkDown编辑软件/">
+    <link itemprop="mainEntityOfPage" href="ericode.pro/2016/09/25/《Git-Pro》Git初识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eric">
@@ -299,7 +304,7 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
             
             
               
-                究级MarkDown编辑软件
+                《Git-Pro》Git初识
               
             
           </h1>
@@ -314,8 +319,8 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-25T19:51:09+08:00">
-                2016-06-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-25T20:11:53+08:00">
+                2016-09-25
               </time>
             
 
@@ -377,10 +382,56 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
       
 
       
-        <p> 作为程序员来讲，最好的写作格式莫过于MarkDown（以下简称md）语法格式了，简洁明了，令人赏心悦目。处女座甚好……虽然我不是处女座，但是美观大方的东西谁不爱呢？<br>  <img src="http://upload-images.jianshu.io/upload_images/877666-cdcf5052d21851e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="simple&amp;powerful.png"><br>  市面上辣么多md编辑器，<br>  Why Typora?<br>  在这里给大家推荐一个MacOS MarkDown编辑器——<a href="https://www.typora.io" target="_blank" rel="external">Typora</a>。</p>
-<p>Typora最大的特点<strong>它在一个窗口中结合了语法高亮和实时预览</strong>。这样我们就可以在一个窗口中以MarkDown语法读写文章，就像这样一样：<br><img src="http://upload-images.jianshu.io/upload_images/877666-063f4b77ac52c3dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="why typora"><br>许多编辑器，诸如<a href="http://25.io/mou/" target="_blank" rel="external">Mou</a>，它把编辑端和玉兰端分离成两个并排的窗口，这在大尺寸的屏幕下是OK的，但是大部分人没有那么大的屏幕，在这方面有些不够友好，每当我写一段文字，我需要上下滑动预览窗口去查看效果。切换预览窗口是会分心的，引起注意力分散，当我们在写一篇md语法的文档的时候，我更愿意专注于编写端，因此像Typora这种可以实时预览的编辑器是十分受欢迎的。对于别的编辑器，还有存在预览端和编写端预想中的形式不一样，因为每个编辑器使用的md解析器不一样，尤其是对于code来说，代码栅栏可能会以不同的方式解析和突出显示。</p>
-<p>因此，Typora可以帮助你摆脱额外的预览窗口。</p>
-<p>Additonal，Typora还支持Windows/Linux版本,但是真心推荐Mac OS或者Linux版本的，省心小巧又好用……<br><img src="http://upload-images.jianshu.io/upload_images/877666-dcc191dddfa43848.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="good stars"><br>小伙伴们还在等什么？抓紧时间上车吧！You gonna love it !</p>
+        <p><strong>获取Git仓库</strong></p>
+<p>有两种取得Git 项目仓库的方法。1.在现有的项目或者目录下导入所有的文件到Git中 2.从一个服务器克隆一个现有的Git仓库。</p>
+<p><strong>1.在现有目录中初始化仓库</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
+<p>该命令创建了.git子目录，它紧紧包含初始化Git仓库中所有的必须文件，这些文件是Git仓库的骨干。如果你是在已经存在文件的文件夹中初始化Git仓库，我们应该开始跟踪这些文件并且提交。git add 命令来指定对文件的跟踪，让后git commit提交。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add test.c</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"初始化项目版本"</span></div></pre></td></tr></table></figure>
+<p>这样test.c和README.md已经处于版本控制之下。</p>
+<p><strong>2.克隆现有的仓库</strong></p>
+<p>使用git clone命令，git clone的是该Git仓库服务器上的几乎所有数据，而不是复制完成你的工作所需要的文件。当你执行clone命令的时候，默认配置下远程Git仓库中的每一个文件的每一个版本都将被拉取下来。使用命令<code>git clone [url]</code>。比如要从github或者gitlab上克隆某个项目：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https:<span class="comment">//github.com/AgentEric/xxxx/oooo</span></div></pre></td></tr></table></figure>
+<p>这个命令会在当前目录下创建一个名字为”oooo”的目录，并且在这个目录下初始化一个.git文件夹，从远程仓库拉取所有的数据放入.git文件计划i啊，然后从中读取最新版本的文件的拷贝。进入”oooo”文件夹，所有的项目文件已经在里面了，准本就绪并且等待我们的开发和使用。另外：如果我们想在克隆远程仓库的时候自定义本地仓库的名字：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https:<span class="comment">//github.com/AgentEric/xxxx/oooo myName</span></div></pre></td></tr></table></figure>
+<p>这样除了执行与上一个命令同样的操作外，本地创建的仓库名字变为 myName。</p>
+<p><strong>检查当前文件状态</strong></p>
+<p><code>git status</code></p>
+<p><strong>跟踪新文件</strong></p>
+<p><code>git add README.md</code></p>
+<p><code>git add</code>命令使用文件或者目录的路径作为参数，如果参数是目录的路径，该命令将递归地跟踪目录下的所有文件。</p>
+<p><strong>暂存已修改的文件</strong></p>
+<p><code>git add</code>命令是多功能命令：<em>她可以用来开始跟踪新文件，或者把已经跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已经解决状态等。</em>所以，对她的理解最正确的是：<strong>添加内容到下一次提交中。</strong></p>
+<p>注意：同一个文件可能会出现在暂存区和非暂存区。git 暂存了每一次运行<code>git add</code>命令时的版本，而不是在运行<code>git commit</code>命令时候的当前目录下的版本。所以运行了<code>git add</code>之后如果又作了修改，需要重新运行<code>git add</code>把最新的版本重暂存起来。</p>
+<p>基本的Git工作流程如下：</p>
+<ol>
+<li>在工作目录中修改文件</li>
+<li>暂存文件，将文件的快放入暂存区域</li>
+<li>提交更新，找到暂存区域的文件，将快照永久性存储到Git仓库目录。</li>
+</ol>
+<p>如果Git目录中保存着特定版本文件，则属于<strong>已提交committed</strong>状态。如果作了修改并已放入暂存区，就属于<strong>已暂存staged</strong>状态。如果上次取出后，作了修改但还没有放到暂存区域，则是<strong>已修改modified</strong>状态。</p>
+<ul>
+<li>committed：已提交表示数据已经安全地保存在本地数据库 中。</li>
+<li>modified: 已修改表示修改了文件，但是还没有保存到数据库中。</li>
+<li>staged: 已暂存表示对一个已经修改文件的当前版本作了标记，使之包含在下次提交的快照中。</li>
+</ul>
+<p>命令行<br>只有在命令行模式，才能执行Git的所有命令，而大多数的GUI软件只实现了Git所有命令或者功能的子集，并且提供图形界面来降低难度。</p>
+<p>Git保证完整性</p>
+<p>Git中所有数据在存储前都会计算校验和，然后以校验和引用。用以计算校验和的机制叫SHA-1散列（hash,哈希），它由40个十六进制的字符串（0-9 a-f）组成的字符串，基于Git中文件的内容和目录结构计算出来的。<u>注意</u>：<a href="http://tech.sina.com.cn/it/2017-02-24/doc-ifyavwcv8684013.shtml" target="_blank" rel="external">谷歌攻破SHA-1算法</a>，本来哈希碰撞本来是不应该发生的但是当哈希算法存在漏洞时，攻击者可以制造出碰撞，用来攻击那些依靠哈希值来校验文件的系统，植入恶意文档造成恶果。Chrome、Firefox以及Edge已经公开宣布弃用SHA-1。关于为什么Google着急弃用SHA-1，请看这篇<a href="http://daily.zhihu.com/story/4195991" target="_blank" rel="external">文章</a>。</p>
+<p>初次运行Git前的配置</p>
+<p>Git自带一个git config的工具来帮助设置控制Git外观和行为的配置变量。</p>
+<ul>
+<li>/etc/gitconfig 文件：包含系统上每一个用户以及她们仓库的通用配置。如果带有 - -sytem选项的git config，它会从此文件读写配置变量。</li>
+<li>~/.gitconfig或~/.config/git/config文件：只针对当前用户。可以传递 - -global选项让Git读写此文件。</li>
+<li>当前使用仓库的Git目录中的config文件（.git/gitconfig）:只针对该仓库</li>
+</ul>
+<p><code>git config</code>命令有三层作用域分别是 <code>--system --global--local</code>，越往后优先级越高，local配置会覆盖所有的，如果local空则读取global，如果global空则读取system。每一个级别覆盖上一个级别的配置，所以.git/config的配置会覆盖/etc/gitconfig中的配置变量。</p>
+<p>查看配置项</p>
+<p><code>git config --list</code>查看特定的配置项<code>git config user.name</code></p>
+<p>获取帮助：<code>git help config</code></p>
+<p>设置默认文本编辑器（我习惯vim）</p>
+<p><code>git config --global core.editor vim</code></p>
+<p>（未完待续……）</p>
 
       
     </div>
@@ -410,7 +461,7 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
       
         <div class="post-tags">
           
-            <a href="/tags/工具/" rel="tag"># 工具</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -423,8 +474,8 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/07/25/有味道的博客/" rel="next" title="有味道的博客">
+                <i class="fa fa-chevron-left"></i> 有味道的博客
               </a>
             
           </div>
@@ -433,8 +484,8 @@ Typora最大的特点它在一个窗口中结合了语法高亮和实时预览�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/25/有味道的博客/" rel="prev" title="有味道的博客">
-                有味道的博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/26/成为更好的自己/" rel="prev" title="成为更好的自己">
+                成为更好的自己 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ericode.pro/"/>
-  <updated>2017-03-25T11:57:09.000Z</updated>
+  <updated>2017-02-06T14:58:32.000Z</updated>
   <id>ericode.pro/</id>
   
   <author>
@@ -16,11 +16,119 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Manjaro Chrome54+ Flash不能使用的解决办法</title>
+    <link href="ericode.pro/2017/01/16/Manjaro-Chrome54-Flash%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>ericode.pro/2017/01/16/Manjaro-Chrome54-Flash不能使用的解决办法/</id>
+    <published>2017-01-16T14:58:32.000Z</published>
+    <updated>2017-02-06T14:58:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近一直在用 <a href="https://manjaro.org/" target="_blank" rel="external">Manjaro-Linux</a>，越用越来越爱上它了……给大家安利一下。<br>不过，刚开始用它的时候，很惊喜也有点郁闷，因为它安装的Chrome都是最新版Chrome54+，默认不再开启Flash Player。对于绝大多数小白来说，这是最紧要的。更重要的是在网上没有相对应的解决办法（我是指针对Manjaro系统），所以在我解决之后，我决定写一篇博文，供大家提供参考。<br>On Manjaro(or otherwise Linux System)<br>1.If you have installed PeperFlash(If you haven’t installed,jump to step 2 )如果你已经安装Flash，如果没有请直接看第二步<br>Open Chrome,In the address bar,type <strong>chrome:plugins</strong> to open the Plug-inspage.打开Chrome，在地址栏输入“chrome:plugins”，打开插件页面。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/877666-9aef236ef8a19d29.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="chrome-plugins.jpg"></p>
+<p>On the Plug-ins screen that appears, find the Adobe Flash Player listing. Check the status (Enabled or Disabled).在打开的插件页面，找到Flash，检查Flash的状态，是否允许运行。<br>Select <strong>Always allowed to run</strong> to always allow Flash Player to run.选择总是允许运行。<br>Close the Plug-ins screen,restart Chrome.关闭插件页面，重启Chrome。<br>2.Install PepperFlash First<br>在manjaro中使用包管理器搜索PepperFlash，点击安装即可。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/877666-26486f55ad6e83df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="location"></p>
+<p>进入PepperFlash安装路径，里面有两个文件libpepflashplayer.so和manifest.json，记住这两个文件的路径，一会儿我们要copy这个文件到chrome目录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/877666-4712db3c7a273dca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="location1.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/877666-114286cc670eea13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="terminalpepperflash.png"></p>
+<p>进入terminl,输入su -l 进入root权限。</p>
+<p>进入chrome路径，如下图所示，使用命令mkdir PepperFlash创建文件夹<br>cd PepperFlasha    进入文件夹</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/877666-b6377fcd8192bed9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="chromelocation.png"></p>
+<p>cp XXX…/libpepflashplayer.so .    将libpepflashplayer.so文件copy到当前路径(.代表拷贝到当前目录)<br>cp XXX…/manifest.json .            将manifest.json拷贝到当前路径</p>
+<p>cd /usr/share/applications<br>vim google-chrome.desktop        使用vim打开google-chrome.desktop，在所有的/usr/bin/google-chrome-stable 后面添加命令 –ppapi-flash-path=/opt/google/chrome/PepperFlash/libpepflashplayer.so，保存退出。</p>
+<p><strong>所有操作可能需要root权限，su -l</strong>，请务必保证安装了vim文本编辑工具。</p>
+<p>重启Chrome，检查第一步，插件页面是否开启了Flash插件。</p>
+<p>经过这一系列操作，你的Chrome已经可以调用Flash了，你又可以快乐地看美剧啦！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近一直在用 &lt;a href=&quot;https://manjaro.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Manjaro-Linux&lt;/a&gt;，越用越来越爱上它了……给大家安利一下。&lt;br&gt;不过，刚开始用它的时候，很惊喜也有点郁闷，因为它安装的
+    
+    </summary>
+    
+      <category term="技术" scheme="ericode.pro/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="工具" scheme="ericode.pro/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS10调用相机crash的问题</title>
+    <link href="ericode.pro/2016/12/25/iOS10%E8%B0%83%E7%94%A8%E7%9B%B8%E6%9C%BAcrash%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>ericode.pro/2016/12/25/iOS10调用相机crash的问题/</id>
+    <published>2016-12-25T12:13:21.000Z</published>
+    <updated>2017-03-25T12:14:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>君子博学而日参省乎己，则知明而行无过矣。</p>
+</blockquote>
+<p>今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。<br>调用摄像头的时候，Xcode 控制台输出 Log:</p>
+<p>“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”</p>
+<p>解决办法：打开 info.plist，输入 Privacy 可以迅速定位到这一权限系列，找到你需要的权限，修改后面的 value 就可以添加相关的访问权限 Key&amp;Value.（Value 是 String 类型的授权描述，可根据不同产品自定义，还可以国际化…）<br><img src="http://upload-images.jianshu.io/upload_images/877666-bc2dcf9e9861468b.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="info.plist设置.jpeg"></p>
+<p>举一反三。</p>
+<ol>
+<li><p>Privacy - NSCameraUsageDescription -&gt; 相机权限</p>
+<p>Value: App 需要您的同意才能访问相机</p>
+</li>
+<li><p>Privacy - NSPhotoLibraryUsageDescription -&gt; 相册权限</p>
+<p>Value: App 需要您的同意才能访问相册</p>
+</li>
+<li><p>Privacy - NSMicrophoneUsageDescription -&gt; 麦克风</p>
+<p>……</p>
+</li>
+<li><p>Privacy - NSContactsUsageDescription -&gt; 通讯录</p>
+</li>
+<li><p>Privacy - NSLocationUsageDescription -&gt; 地理位置</p>
+<p>Privacy - NSLocationWhenInUseUsageDescription-&gt;在使用期间访问位置</p>
+<p>Privacy - NSLocationAlwaysUsageDescription-&gt;始终访问地理位置</p>
+</li>
+<li><p>Privacy - NSCalendarsUsageDescription-&gt;日历</p>
+</li>
+<li><p>Privacy - NSRemindersUsageDescription-&gt;提醒事项</p>
+</li>
+<li><p>Privacy - NSMotionUsageDescription-&gt;运动与健身</p>
+</li>
+<li><p>Privacy - NSHealthShareUsageDescription-&gt;健康分享</p>
+</li>
+<li><p>Privacy - NSHealthUpdateUsageDescription-&gt;健康更新</p>
+</li>
+<li><p>Privacy - NSBluetoothPeripheralUsageDescription-&gt;蓝牙</p>
+</li>
+<li><p>Privacy - NSAppleMusicUsageDescription-&gt;媒体资料库</p>
+</li>
+<li><p>Privacy - Privacy - Speech Recognition Usage Description-&gt;语音转文字<br>好了，以上就是我搜集的隐私相关权限 Key。</p>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>故<strong>不积跬步</strong>，无以致千里；不积小流，无以成江海。</p>
+<p>荀子《劝学篇》</p>
+</blockquote>
+<p>愿你我共进步。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;君子博学而日参省乎己，则知明而行无过矣。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹
+    
+    </summary>
+    
+      <category term="技术" scheme="ericode.pro/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="iOS" scheme="ericode.pro/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>成为更好的自己</title>
-    <link href="ericode.pro/2017/10/26/%E6%88%90%E4%B8%BA%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1/"/>
-    <id>ericode.pro/2017/10/26/成为更好的自己/</id>
-    <published>2017-10-25T18:21:04.000Z</published>
-    <updated>2017-03-25T11:57:09.000Z</updated>
+    <link href="ericode.pro/2016/10/26/%E6%88%90%E4%B8%BA%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1/"/>
+    <id>ericode.pro/2016/10/26/成为更好的自己/</id>
+    <published>2016-10-25T18:21:04.000Z</published>
+    <updated>2017-03-25T12:07:11.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/877666-cc0d067043132eeb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="美好的自己.jpg"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">写这篇博文，不是要标榜自己的决心和毅力有多强。</div><div class="line">从小我就被我妈定义为三分钟热度的人，这一点直到现在她仍未改变她的观点。直到现在每次给家打电话，我妈临了总是嘱咐我：“好好干（工作），每天早点起床，好好和同事领导相处......”。</div></pre></td></tr></table></figure>
@@ -99,11 +207,85 @@
   </entry>
   
   <entry>
+    <title>《Git-Pro》Git初识</title>
+    <link href="ericode.pro/2016/09/25/%E3%80%8AGit-Pro%E3%80%8BGit%E5%88%9D%E8%AF%86/"/>
+    <id>ericode.pro/2016/09/25/《Git-Pro》Git初识/</id>
+    <published>2016-09-25T12:11:53.000Z</published>
+    <updated>2017-03-25T12:12:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>获取Git仓库</strong></p>
+<p>有两种取得Git 项目仓库的方法。1.在现有的项目或者目录下导入所有的文件到Git中 2.从一个服务器克隆一个现有的Git仓库。</p>
+<p><strong>1.在现有目录中初始化仓库</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
+<p>该命令创建了.git子目录，它紧紧包含初始化Git仓库中所有的必须文件，这些文件是Git仓库的骨干。如果你是在已经存在文件的文件夹中初始化Git仓库，我们应该开始跟踪这些文件并且提交。git add 命令来指定对文件的跟踪，让后git commit提交。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add test.c</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"初始化项目版本"</span></div></pre></td></tr></table></figure>
+<p>这样test.c和README.md已经处于版本控制之下。</p>
+<p><strong>2.克隆现有的仓库</strong></p>
+<p>使用git clone命令，git clone的是该Git仓库服务器上的几乎所有数据，而不是复制完成你的工作所需要的文件。当你执行clone命令的时候，默认配置下远程Git仓库中的每一个文件的每一个版本都将被拉取下来。使用命令<code>git clone [url]</code>。比如要从github或者gitlab上克隆某个项目：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https:<span class="comment">//github.com/AgentEric/xxxx/oooo</span></div></pre></td></tr></table></figure>
+<p>这个命令会在当前目录下创建一个名字为”oooo”的目录，并且在这个目录下初始化一个.git文件夹，从远程仓库拉取所有的数据放入.git文件计划i啊，然后从中读取最新版本的文件的拷贝。进入”oooo”文件夹，所有的项目文件已经在里面了，准本就绪并且等待我们的开发和使用。另外：如果我们想在克隆远程仓库的时候自定义本地仓库的名字：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https:<span class="comment">//github.com/AgentEric/xxxx/oooo myName</span></div></pre></td></tr></table></figure>
+<p>这样除了执行与上一个命令同样的操作外，本地创建的仓库名字变为 myName。</p>
+<p><strong>检查当前文件状态</strong></p>
+<p><code>git status</code></p>
+<p><strong>跟踪新文件</strong></p>
+<p><code>git add README.md</code></p>
+<p><code>git add</code>命令使用文件或者目录的路径作为参数，如果参数是目录的路径，该命令将递归地跟踪目录下的所有文件。</p>
+<p><strong>暂存已修改的文件</strong></p>
+<p><code>git add</code>命令是多功能命令：<em>她可以用来开始跟踪新文件，或者把已经跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已经解决状态等。</em>所以，对她的理解最正确的是：<strong>添加内容到下一次提交中。</strong></p>
+<p>注意：同一个文件可能会出现在暂存区和非暂存区。git 暂存了每一次运行<code>git add</code>命令时的版本，而不是在运行<code>git commit</code>命令时候的当前目录下的版本。所以运行了<code>git add</code>之后如果又作了修改，需要重新运行<code>git add</code>把最新的版本重暂存起来。</p>
+<p>基本的Git工作流程如下：</p>
+<ol>
+<li>在工作目录中修改文件</li>
+<li>暂存文件，将文件的快放入暂存区域</li>
+<li>提交更新，找到暂存区域的文件，将快照永久性存储到Git仓库目录。</li>
+</ol>
+<p>如果Git目录中保存着特定版本文件，则属于<strong>已提交committed</strong>状态。如果作了修改并已放入暂存区，就属于<strong>已暂存staged</strong>状态。如果上次取出后，作了修改但还没有放到暂存区域，则是<strong>已修改modified</strong>状态。</p>
+<ul>
+<li>committed：已提交表示数据已经安全地保存在本地数据库 中。</li>
+<li>modified: 已修改表示修改了文件，但是还没有保存到数据库中。</li>
+<li>staged: 已暂存表示对一个已经修改文件的当前版本作了标记，使之包含在下次提交的快照中。</li>
+</ul>
+<p>命令行<br>只有在命令行模式，才能执行Git的所有命令，而大多数的GUI软件只实现了Git所有命令或者功能的子集，并且提供图形界面来降低难度。</p>
+<p>Git保证完整性</p>
+<p>Git中所有数据在存储前都会计算校验和，然后以校验和引用。用以计算校验和的机制叫SHA-1散列（hash,哈希），它由40个十六进制的字符串（0-9 a-f）组成的字符串，基于Git中文件的内容和目录结构计算出来的。<u>注意</u>：<a href="http://tech.sina.com.cn/it/2017-02-24/doc-ifyavwcv8684013.shtml" target="_blank" rel="external">谷歌攻破SHA-1算法</a>，本来哈希碰撞本来是不应该发生的但是当哈希算法存在漏洞时，攻击者可以制造出碰撞，用来攻击那些依靠哈希值来校验文件的系统，植入恶意文档造成恶果。Chrome、Firefox以及Edge已经公开宣布弃用SHA-1。关于为什么Google着急弃用SHA-1，请看这篇<a href="http://daily.zhihu.com/story/4195991" target="_blank" rel="external">文章</a>。</p>
+<p>初次运行Git前的配置</p>
+<p>Git自带一个git config的工具来帮助设置控制Git外观和行为的配置变量。</p>
+<ul>
+<li>/etc/gitconfig 文件：包含系统上每一个用户以及她们仓库的通用配置。如果带有 - -sytem选项的git config，它会从此文件读写配置变量。</li>
+<li>~/.gitconfig或~/.config/git/config文件：只针对当前用户。可以传递 - -global选项让Git读写此文件。</li>
+<li>当前使用仓库的Git目录中的config文件（.git/gitconfig）:只针对该仓库</li>
+</ul>
+<p><code>git config</code>命令有三层作用域分别是 <code>--system --global--local</code>，越往后优先级越高，local配置会覆盖所有的，如果local空则读取global，如果global空则读取system。每一个级别覆盖上一个级别的配置，所以.git/config的配置会覆盖/etc/gitconfig中的配置变量。</p>
+<p>查看配置项</p>
+<p><code>git config --list</code>查看特定的配置项<code>git config user.name</code></p>
+<p>获取帮助：<code>git help config</code></p>
+<p>设置默认文本编辑器（我习惯vim）</p>
+<p><code>git config --global core.editor vim</code></p>
+<p>（未完待续……）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;获取Git仓库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有两种取得Git 项目仓库的方法。1.在现有的项目或者目录下导入所有的文件到Git中 2.从一个服务器克隆一个现有的Git仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.在现有目录中初始化仓库&lt;/strong&gt;&lt;/p
+    
+    </summary>
+    
+      <category term="技术" scheme="ericode.pro/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Git" scheme="ericode.pro/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>有味道的博客</title>
-    <link href="ericode.pro/2016/11/25/%E6%9C%89%E5%91%B3%E9%81%93%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>ericode.pro/2016/11/25/有味道的博客/</id>
-    <published>2016-11-25T11:48:59.000Z</published>
-    <updated>2017-03-25T11:50:33.000Z</updated>
+    <link href="ericode.pro/2016/07/25/%E6%9C%89%E5%91%B3%E9%81%93%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>ericode.pro/2016/07/25/有味道的博客/</id>
+    <published>2016-07-25T11:48:59.000Z</published>
+    <updated>2017-03-25T12:07:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>（本文持续更新中……）</p>
 <p>前言：<br>一晃在这个行当里，厮混了3年多了，自己也从一个懵懵懂懂的编程小子，慢慢地蜕变成了老油条，或许我能面对项目需要，临时抱佛脚或者从网上找一些 demo 出来，然后修修改改。好像就能应付项目的要求了，但是真正的匠人不是这样的。<br>面对一些常见项目中的需求，一部分都做过，或者大部分都耳濡目染过，但是真要是动起手来，也不见得有多么的驾轻就熟，在自己不断学习的过程中，技术类博客给了我很多的帮助，有一些问题，跟着博客学习研究一番，可能就会解决了。但是回过头来想想，自己以前遇到过那么多的技术难点，虽然现在来看没有什么难度了，但是对于当初的我来说，那很有可能就是一个未知的领域。即便当时，跟着前辈们的博客，照着葫芦画瓢，有可能会解决问题，但是收获却不是很大，没有深度挖掘，就没有积累。在紧张的忙碌中，解决了问题之后，可能就会束之高阁了，并没有及时的扩展发散，这也是为什么这几年我的进步不是很明显的主要原因吧。好在现在觉悟了，把这几年，对我或多或少有帮助的Blog整理了一下，发布出来，供大家互相学习。</p>

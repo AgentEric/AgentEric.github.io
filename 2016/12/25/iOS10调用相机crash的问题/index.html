@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iOS, Swift" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -89,15 +89,27 @@
 
 
 
-<meta name="description" content="不忘初心，砥砺前行">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eric的博客">
-<meta property="og:url" content="ericode.pro/archives/2017/index.html">
+<meta name="description" content="君子博学而日参省乎己，则知明而行无过矣。
+
+今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。调用摄像头的时候，Xcode 控制台输出 Log:
+“This app has crashed because it attempted to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS10调用相机crash的问题">
+<meta property="og:url" content="ericode.pro/2016/12/25/iOS10调用相机crash的问题/index.html">
 <meta property="og:site_name" content="Eric的博客">
-<meta property="og:description" content="不忘初心，砥砺前行">
+<meta property="og:description" content="君子博学而日参省乎己，则知明而行无过矣。
+
+今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。调用摄像头的时候，Xcode 控制台输出 Log:
+“This app has crashed because it attempted to">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/877666-bc2dcf9e9861468b.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-25T12:14:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eric的博客">
-<meta name="twitter:description" content="不忘初心，砥砺前行">
+<meta name="twitter:title" content="iOS10调用相机crash的问题">
+<meta name="twitter:description" content="君子博学而日参省乎己，则知明而行无过矣。
+
+今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。调用摄像头的时候，Xcode 控制台输出 Log:
+“This app has crashed because it attempted to">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/877666-bc2dcf9e9861468b.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -125,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="ericode.pro/archives/2017/"/>
+  <link rel="canonical" href="ericode.pro/2016/12/25/iOS10调用相机crash的问题/"/>
 
 
 
 
 
-  <title> 归档 | Eric的博客 </title>
+  <title> iOS10调用相机crash的问题 | Eric的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -260,66 +272,232 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 7 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="ericode.pro/2016/12/25/iOS10调用相机crash的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eric">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://upload-images.jianshu.io/upload_images/877666-d0e51897e3b12544.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eric的博客">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS10调用相机crash的问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-25T20:13:21+08:00">
+                2016-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <blockquote>
+<p>君子博学而日参省乎己，则知明而行无过矣。</p>
+</blockquote>
+<p>今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。<br>调用摄像头的时候，Xcode 控制台输出 Log:</p>
+<p>“This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app’s Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data.”</p>
+<p>解决办法：打开 info.plist，输入 Privacy 可以迅速定位到这一权限系列，找到你需要的权限，修改后面的 value 就可以添加相关的访问权限 Key&amp;Value.（Value 是 String 类型的授权描述，可根据不同产品自定义，还可以国际化…）<br><img src="http://upload-images.jianshu.io/upload_images/877666-bc2dcf9e9861468b.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="info.plist设置.jpeg"></p>
+<p>举一反三。</p>
+<ol>
+<li><p>Privacy - NSCameraUsageDescription -&gt; 相机权限</p>
+<p>Value: App 需要您的同意才能访问相机</p>
+</li>
+<li><p>Privacy - NSPhotoLibraryUsageDescription -&gt; 相册权限</p>
+<p>Value: App 需要您的同意才能访问相册</p>
+</li>
+<li><p>Privacy - NSMicrophoneUsageDescription -&gt; 麦克风</p>
+<p>……</p>
+</li>
+<li><p>Privacy - NSContactsUsageDescription -&gt; 通讯录</p>
+</li>
+<li><p>Privacy - NSLocationUsageDescription -&gt; 地理位置</p>
+<p>Privacy - NSLocationWhenInUseUsageDescription-&gt;在使用期间访问位置</p>
+<p>Privacy - NSLocationAlwaysUsageDescription-&gt;始终访问地理位置</p>
+</li>
+<li><p>Privacy - NSCalendarsUsageDescription-&gt;日历</p>
+</li>
+<li><p>Privacy - NSRemindersUsageDescription-&gt;提醒事项</p>
+</li>
+<li><p>Privacy - NSMotionUsageDescription-&gt;运动与健身</p>
+</li>
+<li><p>Privacy - NSHealthShareUsageDescription-&gt;健康分享</p>
+</li>
+<li><p>Privacy - NSHealthUpdateUsageDescription-&gt;健康更新</p>
+</li>
+<li><p>Privacy - NSBluetoothPeripheralUsageDescription-&gt;蓝牙</p>
+</li>
+<li><p>Privacy - NSAppleMusicUsageDescription-&gt;媒体资料库</p>
+</li>
+<li><p>Privacy - Privacy - Speech Recognition Usage Description-&gt;语音转文字<br>好了，以上就是我搜集的隐私相关权限 Key。</p>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>故<strong>不积跬步</strong>，无以致千里；不积小流，无以成江海。</p>
+<p>荀子《劝学篇》</p>
+</blockquote>
+<p>愿你我共进步。</p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/26/成为更好的自己/" rel="next" title="成为更好的自己">
+                <i class="fa fa-chevron-left"></i> 成为更好的自己
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/16/Manjaro-Chrome54-Flash不能使用的解决办法/" itemprop="url">
-              
-                <span itemprop="name">Manjaro Chrome54+ Flash不能使用的解决办法</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/16/Manjaro-Chrome54-Flash不能使用的解决办法/" rel="prev" title="Manjaro Chrome54+ Flash不能使用的解决办法">
+                Manjaro Chrome54+ Flash不能使用的解决办法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-16T22:58:32+08:00"
-              content="2017-01-16" >
-          01-16
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -327,6 +505,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -602,11 +784,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
