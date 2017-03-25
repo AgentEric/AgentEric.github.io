@@ -6,7 +6,8 @@ tags: 工具
 categories:
 - 技术
 ---
-
+强烈安利一款MarkDown实时编辑预览编辑软件——Typora给大家~
+<!--more-->
  作为程序员来讲，最好的写作格式莫过于MarkDown（以下简称md）语法格式了，简洁明了，令人赏心悦目。处女座甚好……虽然我不是处女座，但是美观大方的东西谁不爱呢？
   ![simple&powerful.png](http://upload-images.jianshu.io/upload_images/877666-cdcf5052d21851e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
   市面上辣么多md编辑器，

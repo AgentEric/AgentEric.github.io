@@ -6,8 +6,10 @@ categories:
 - 技术
 tags: 工具
 ---
+
 最近一直在用 [Manjaro-Linux](https://manjaro.org/)，越用越来越爱上它了……给大家安利一下。
 不过，刚开始用它的时候，很惊喜也有点郁闷，因为它安装的Chrome都是最新版Chrome54+，默认不再开启Flash Player。对于绝大多数小白来说，这是最紧要的。更重要的是在网上没有相对应的解决办法（我是指针对Manjaro系统），所以在我解决之后，我决定写一篇博文，供大家提供参考。
+<!--more-->
 On Manjaro(or otherwise Linux System)
 1.If you have installed PeperFlash(If you haven't installed,jump to step 2 )如果你已经安装Flash，如果没有请直接看第二步
 Open Chrome,In the address bar,type **chrome:plugins** to open the Plug-inspage.打开Chrome，在地址栏输入“chrome:plugins”，打开插件页面。

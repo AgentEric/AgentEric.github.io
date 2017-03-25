@@ -9,7 +9,9 @@ categories:
 
 > 君子博学而日参省乎己，则知明而行无过矣。
 
-今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。
+今天遇到一个老项目在 iOS10下 Crash 的问题，研究了一下，终于找到问题源头。
+<!--more-->
+iOS10对于App 的授权访问更加严格了，如果调用系统相册、相机功能，或者苹果健康等等没有配置授权请求都会遇到闪退的情况。
 调用摄像头的时候，Xcode 控制台输出 Log:
 
 "This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app's Info.plist must contain an NSCameraUsageDescription key with a string value explaining to the user how the app uses this data."
